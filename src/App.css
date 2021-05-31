@@ -46,16 +46,16 @@
 
 .fixed {
   position: fixed;
-  margin-top: 20px;
   margin-left: 50px;
+  margin-top: 20px;
   font-size: 15px;
   padding: 3px 70px;
 }
 
 .coordinate {
   color: gray;
+  margin-left: 50px;
   margin-top: 70px;
-  margin-left: 40px;
   font-size: 15px;
   position: fixed;
 }
@@ -71,6 +71,7 @@
   overflow: auto;
   border-style: solid;
   margin-top: 25px;
+  height: 80vh;
   margin-left: 160px;
   margin-right: 160px;
   padding-bottom: 15px;
@@ -83,10 +84,20 @@
   justify-content: center;
 }
 
+.triangle-container {
+  display: flex;
+  justify-self: center;
+}
+
 .x-coordinate {
   color: blue;
 }
 
 .y-coordinate {
   color: red;
+}
+
+.fullscreen-enabled {
+  background-color: white;
+  overflow: scroll;
 }

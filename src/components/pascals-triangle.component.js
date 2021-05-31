@@ -3,18 +3,43 @@ import { Link } from 'react-router-dom'
 
 const PascalsTriangle = (props) => {
 
-  const [currentRow, setCurrentRow] = useState(0);
-  const [prevRow, setPrevRow] = useState(0);
   const [counter, setCounter] = useState(0);
+  const [pascalsArray, setPascalsArray] = useState([]);
 
   useEffect(() => {
     setCounter(props.numOfRows);
-    console.log(counter);
+    setPascalsArray(populatePascalsArray(counter));
   },[counter]);
+
+  const populatePascalsArray = (pascalsNumber) => {
+    let pascalsArray=[];
+    let pascalsRow=[];
+    for(let i=0; i < pascalsNumber; i++) {
+      if(i===0) {
+        pascalsArray.push([1]);
+      } else {
+        for(let j=0; j<=i; j++) {
+          if(j===0) {
+            pascalsRow.push(1);
+          } else if(j===i) {
+            pascalsRow.push(1);
+            pascalsArray.push(pascalsRow);
+            pascalsRow=[];
+          } else {
+            pascalsRow.push(pascalsArray[i-1][j-1] + pascalsArray[i-1][j]);
+          }
+        }
+      }
+    }
+    console.log(pascalsArray);
+    return pascalsArray;
+  }
 
   return (
     <div>
-      <div>{props.numOfRows}</div>
+      <div className='center'>{pascalsArray.map(element => (
+        <div>{element}</div>
+      ))}</div>
       <Link to='/'>
         <button className="btn btn-primary">Back to Home Page</button>
       </Link>

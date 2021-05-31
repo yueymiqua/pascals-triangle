@@ -9,7 +9,7 @@ const PascalsTriangle = (props) => {
   useEffect(() => {
     setCounter(props.numOfRows);
     setPascalsArray(populatePascalsArray(counter));
-  },[counter]);
+  },[counter, props.numOfRows]);
 
   const populatePascalsArray = (pascalsNumber) => {
     let pascalsArray=[];
@@ -31,14 +31,15 @@ const PascalsTriangle = (props) => {
         }
       }
     }
-    console.log(pascalsArray);
     return pascalsArray;
   }
 
   return (
     <div>
-      <div className='center'>{pascalsArray.map(element => (
-        <div>{element}</div>
+      <div className='center'>{pascalsArray.map((element, element_id) => (
+        <div className='pascal-row' key={element_id}>{element.map((num, num_id) => (
+          <button className='pascal-numbers' key={num_id}>{num}</button>
+        ))}</div>
       ))}</div>
       <Link to='/'>
         <button className="btn btn-primary">Back to Home Page</button>

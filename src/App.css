@@ -1,3 +1,20 @@
 .center {
   text-align: center;
 }
+
+.spaced {
+  padding: 20px 30px;
+}
+
+.row {
+  border-color: white;
+}
+
+.pascal-row {
+  margin: 5px;
+  padding: 5px;
+}
+
+.pascal-numbers {
+  padding: 20px 30px;
+}

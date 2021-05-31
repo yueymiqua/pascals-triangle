@@ -1,9 +1,23 @@
+.title {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  font-size: 15px;
+}
+
+.btn {
+  color: black;
+  font-size: 20px;
+  background-color: #eeeeee;
+}
+
 .center {
   text-align: center;
+  margin: 0 auto;
 }
 
 .spaced {
-  padding: 20px 30px;
+  padding: 37px 47px;
+  margin: 10px 10px;
 }
 
 .row {
@@ -13,8 +27,4 @@
 .pascal-row {
   margin: 5px;
   padding: 5px;
-}
-
-.pascal-numbers {
-  padding: 20px 30px;
 }

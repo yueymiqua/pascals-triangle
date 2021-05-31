@@ -13,8 +13,8 @@ function App() {
     <Router>
       <Route path='/' exact>
         <div className="container center">
-          <h3>Select Number for Pascal Triangle</h3>
-          <table className="table">
+          <p className='title'>Select Number for Pascal Triangle</p>
+          <table className="center">
             <tbody>
               <tr>
                 <td>

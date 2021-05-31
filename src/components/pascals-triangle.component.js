@@ -36,14 +36,15 @@ const PascalsTriangle = (props) => {
 
   return (
     <div>
-      <div className='center'>{pascalsArray.map((element, element_id) => (
-        <div className='pascal-row' key={element_id}>{element.map((num, num_id) => (
-          <button className='pascal-numbers' key={num_id}>{num}</button>
+      <Link to='/'>
+        <button className="btn btn-secondary">Close</button>
+      </Link>
+      <div className="center">{pascalsArray.map((element, element_id) => (
+        <div className="pascal-row" key={element_id}>{element.map((num, num_id) => (
+          <button className="spaced" key={num_id}>{num}</button>
         ))}</div>
       ))}</div>
-      <Link to='/'>
-        <button className="btn btn-primary">Back to Home Page</button>
-      </Link>
+      
     </div>
   )
 }

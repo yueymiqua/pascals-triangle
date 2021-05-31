@@ -53,7 +53,7 @@ const PascalsTriangle = (props) => {
           </Link>
           <div className="coordinate">Current X Y: <span className="x-coordinate">X{xCoordinate}</span><span className="y-coordinate"> Y{yCoordinate}</span></div>
           <div className="center">{pascalsArray.map((element, element_id) => (
-            <div className="pascal-row" key={element_id}>{element.map((num, num_id) => (
+            <div className="pascal-row triangle" key={element_id}>{element.map((num, num_id) => (
               <button className={`spaced-row ${num_id % 2 === 0?" blue":" green"}`} key={num_id} onClick={() => handleOnclick(element_id, num_id)}>{num}</button>
             ))}</div>
           ))}</div>

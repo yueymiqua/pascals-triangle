@@ -11,6 +11,7 @@ const PascalsTriangle = (props) => {
 
   const handle = useFullScreenHandle();
 
+  // runs when component is loaded
   useEffect(() => {
     setCounter(props.numOfRows);
     setPascalsArray(populatePascalsArray(counter));
